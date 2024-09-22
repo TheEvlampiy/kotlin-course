@@ -1,19 +1,19 @@
 package biz.evlampiy.biz.evlampiy.kotlincourse.lesson6
 
 fun main () {
-
+println(seasonOfTheYear(month))
 }
 
 
 //Задание 1: "Определение Сезона"
 //Контекст: Напишите функцию, которая на основе номера месяца возвращает сезон года.
-val month = 30
+val month = 12
 fun seasonOfTheYear (month: Int): String {
-    return when (month) {
-        in 1..3 -> "Winter"
-        in 4..6 -> "Spring"
-        in 7..9 -> "Summer"
-        in 10..12 -> "Autumn"
+    return when {
+        month in 1..2 || month == 12 -> "Winter"
+        month in 3..5 -> "Spring"
+        month in 6..8 -> "Summer"
+        month in 9..11 -> "Autumn"
         else -> "Ty na kakoi planete zhivyosh???"
     }
 }
